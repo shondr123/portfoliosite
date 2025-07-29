@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <script>
+    if (!sessionStorage.getItem("splashSeen")) {
+      sessionStorage.setItem("splashSeen", "true");
+      window.location.href = "splash.html";
+    }
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>תיק עבודות</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    .screenshots-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+
+    .screenshots-container img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div id="loader"><div class="loader-bar"></div></div>
+
+  <header data-aos="fade-down">
+    <h1>ברוכים הבאים לתיק העבודות שלי</h1>
+    <button id="toggle-dark" title="מצב כהה/בהיר">🌓</button>
+    <nav>
+      <a href="index.html"><i class="fa-solid fa-house"></i> בית</a>
+      <a href="about.html"><i class="fa-solid fa-user"></i> אודות</a>
+      <a href="contact.html"><i class="fa-solid fa-envelope"></i> צור קשר</a>
+      <a href="stats.html"><i class="fa-solid fa-chart-bar"></i> סטטיסטיקות</a>
+    </nav>
+  </header>
+
+  <main class="projects">
+    <section class="project" data-aos="fade-up">
+      <h2 data-aos="zoom-in">Game Market</h2>
+
+      <a href="https://shondr123.github.io/videogamemarketnew/" class="btn" target="_blank" data-aos="fade-left">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> לביקור האתר
+      </a>
+
+      <!-- תמונות מסך מהאתר -->
+      <div class="screenshots-container">
+        <img src="assets/images/videogamestorescreenshot1.png" alt="צילום מסך 1">
+        <img src="assets/images/videogamestorescreenshot2.png" alt="צילום מסך 2">
+        <img src="assets/images/videogamestorescreenshot3.png" alt="צילום מסך 3">
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+    window.addEventListener("load", () => {
+      document.getElementById("loader").style.display = "none";
+    });
+  </script>
+  <script src="script.js" defer></script>
+</body>
+</html>
