@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
-  <script>
-    // בכל רענון או כניסה – מפנה ל-splash
+ <script>
+  // אם המשתמש לא ראה את splash בעבר – נשלח אותו לשם
+  if (!sessionStorage.getItem("splashSeen")) {
     window.location.href = "splash.html";
-  </script>
+  }
+</script>
 
 
 
