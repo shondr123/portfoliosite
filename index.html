@@ -4,6 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>תיק עבודות</title>
+
+  <!-- מניעת לולאה: רק אם לא באנו מ-splash.html וגם לא ראינו אותו עדיין -->
+  <script>
+    const fromSplash = document.referrer.includes("splash.html");
+    const alreadySeen = sessionStorage.getItem("splashSeen");
+
+    if (!alreadySeen && !fromSplash) {
+      window.location.href = "splash.html";
+    }
+  </script>
+
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -23,13 +34,6 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
   </style>
-  <script>
-    window.onload = function () {
-      if (!sessionStorage.getItem("splashSeen")) {
-        window.location.href = "splash.html";
-      }
-    };
-  </script>
 </head>
 <body>
   <div id="loader"><div class="loader-bar"></div></div>
