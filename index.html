@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
- 
+  <script>
+   // אם המשתמש לא ראה את splash בעבר – נשלח אותו לשם
+   if (!sessionStorage.getItem("splashSeen")) {
+     window.location.href = "splash.html";
+   }
+  </script>
+
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
