@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
- <script>
-  // אם המשתמש לא ראה את splash בעבר – נשלח אותו לשם
-  if (!sessionStorage.getItem("splashSeen")) {
-    window.location.href = "splash.html";
-  }
-</script>
-
-
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>תיק עבודות</title>
@@ -32,6 +23,13 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
   </style>
+  <script>
+    window.onload = function () {
+      if (!sessionStorage.getItem("splashSeen")) {
+        window.location.href = "splash.html";
+      }
+    };
+  </script>
 </head>
 <body>
   <div id="loader"><div class="loader-bar"></div></div>
@@ -55,7 +53,6 @@
         <i class="fa-solid fa-arrow-up-right-from-square"></i> לביקור האתר
       </a>
 
-      <!-- תמונות מסך מהאתר -->
       <div class="screenshots-container">
         <img src="assets/images/videogamestorescreenshot1.png" alt="צילום מסך 1">
         <img src="assets/images/videogamestorescreenshot2.png" alt="צילום מסך 2">
