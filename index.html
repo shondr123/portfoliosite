@@ -6,7 +6,6 @@
   <title>תיק עבודות</title>
 
   <script>
-    // בדיקת sessionStorage וגם האם באנו מ-splash.html
     const seenSplash = sessionStorage.getItem("splashSeen");
     const cameFromSplash = document.referrer.includes("splash.html");
 
@@ -15,7 +14,6 @@
     }
   </script>
 
-  <!-- שאר ה-HEAD שלך -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -51,6 +49,7 @@
   </header>
 
   <main class="projects">
+    <!-- פרויקט 1 -->
     <section class="project" data-aos="fade-up">
       <h2 data-aos="zoom-in">Game Market</h2>
       <a href="https://shondr123.github.io/videogamemarketnew/" class="btn" target="_blank" data-aos="fade-left">
@@ -60,6 +59,19 @@
         <img src="assets/images/videogamestorescreenshot1.png" alt="צילום מסך 1">
         <img src="assets/images/videogamestorescreenshot2.png" alt="צילום מסך 2">
         <img src="assets/images/videogamestorescreenshot3.png" alt="צילום מסך 3">
+      </div>
+    </section>
+
+    <!-- פרויקט 2: Cooking Menus -->
+    <section class="project" data-aos="fade-up">
+      <h2 data-aos="zoom-in">ניהול מתכונים</h2>
+      <a href="https://shondr123.github.io/cookingmenus/" class="btn" target="_blank" data-aos="fade-left">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> לביקור האתר
+      </a>
+      <div class="screenshots-container">
+        <img src="assets/images/cookingmenus-screenshot1.png" alt="צילום מסך מתכונים 1">
+        <!-- תוכל להוסיף כאן עוד תמונות לפי הצורך -->
+        <!-- <img src="assets/images/cookingmenus-screenshot2.png" alt="צילום מסך מתכונים 2"> -->
       </div>
     </section>
   </main>
