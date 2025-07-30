@@ -2,19 +2,20 @@
 <html lang="he">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>תיק עבודות</title>
 
-  <!-- מניעת לולאה: רק אם לא באנו מ-splash.html וגם לא ראינו אותו עדיין -->
   <script>
-    const fromSplash = document.referrer.includes("splash.html");
-    const alreadySeen = sessionStorage.getItem("splashSeen");
+    // בדיקת sessionStorage וגם האם באנו מ-splash.html
+    const seenSplash = sessionStorage.getItem("splashSeen");
+    const cameFromSplash = document.referrer.includes("splash.html");
 
-    if (!alreadySeen && !fromSplash) {
-      window.location.href = "splash.html";
+    if (!seenSplash && !cameFromSplash) {
+      window.location.replace("splash.html");
     }
   </script>
 
+  <!-- שאר ה-HEAD שלך -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -52,11 +53,9 @@
   <main class="projects">
     <section class="project" data-aos="fade-up">
       <h2 data-aos="zoom-in">Game Market</h2>
-
       <a href="https://shondr123.github.io/videogamemarketnew/" class="btn" target="_blank" data-aos="fade-left">
         <i class="fa-solid fa-arrow-up-right-from-square"></i> לביקור האתר
       </a>
-
       <div class="screenshots-container">
         <img src="assets/images/videogamestorescreenshot1.png" alt="צילום מסך 1">
         <img src="assets/images/videogamestorescreenshot2.png" alt="צילום מסך 2">
