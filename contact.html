@@ -13,16 +13,15 @@
 
   <header data-aos="fade-down">
     <h1>צור קשר</h1>
-    <button id="toggle-dark" title="מצב כהה/בהיר">
-        🌓
-    </button>
-    <nav>
-      <a href="index.html"><i class="fa-solid fa-house"></i> בית</a>
-      <a href="about.html"><i class="fa-solid fa-user"></i> אודות</a>
-      <a href="contact.html"><i class="fa-solid fa-envelope"></i> צור קשר</a>
-      <a href="stats.html"><i class="fa-solid fa-chart-bar"></i> סטטיסטיקות</a>
-    </nav>
+    <button id="toggle-dark" title="מצב כהה/בהיר">🌙</button>
   </header>
+
+  <nav>
+    <a href="index.html"><i class="fa-solid fa-house"></i> בית</a>
+    <a href="about.html"><i class="fa-solid fa-user"></i> אודות</a>
+    <a href="contact.html"><i class="fa-solid fa-envelope"></i> צור קשר</a>
+    <a href="stats.html"><i class="fa-solid fa-chart-bar"></i> סטטיסטיקות</a>
+  </nav>
 
   <main>
     <ul class="contact-info" data-aos="fade-up">
@@ -49,13 +48,6 @@
   </main>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 800, once: true });
-    window.addEventListener("load", () => {
-      document.getElementById("loader").style.display = "none";
-    });
-  </script>
   <script src="script.js" defer></script>
-
 </body>
 </html>
