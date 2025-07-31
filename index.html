@@ -5,20 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>תיק עבודות</title>
   <script>
-  const seenSplash = sessionStorage.getItem("splashSeen");
-  const cameFromSplash = document.referrer.includes("splash.html");
+    const seenSplash = sessionStorage.getItem("splashSeen");
+    const cameFromSplash = document.referrer.includes("splash.html");
 
-  if (!seenSplash && !cameFromSplash) {
-    window.location.replace("splash.html");
-  }
-</script>
+    if (!seenSplash && !cameFromSplash) {
+      window.location.replace("splash.html");
+    }
+  </script>
 
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
- 
 
   <header data-aos="fade-down">
     <h1>ברוכים הבאים לתיק העבודות שלי</h1>
@@ -35,7 +34,7 @@
   <main class="projects">
     <section class="project" data-aos="fade-up">
       <h2 data-aos="zoom-in">Game Market</h2>
-      <a href="https://shondr123.github.io/videogamemarketnew/" class="btn" target="_blank" data-aos="fade-left">
+      <a href="https://shondr123.github.io/videogamemarketnew/" class="btn" target="_blank" data-aos="fade-left" style="margin-bottom: 20px;">
         <i class="fa-solid fa-arrow-up-right-from-square"></i> לביקור האתר
       </a>
       <div class="screenshots-container">
@@ -47,7 +46,7 @@
 
     <section class="project" data-aos="fade-up">
       <h2 data-aos="zoom-in">ניהול מתכונים</h2>
-      <a href="https://shondr123.github.io/cookingmenus/" class="btn" target="_blank" data-aos="fade-left">
+      <a href="https://shondr123.github.io/cookingmenus/" class="btn" target="_blank" data-aos="fade-left" style="margin-bottom: 20px;">
         <i class="fa-solid fa-arrow-up-right-from-square"></i> לביקור האתר
       </a>
       <div class="screenshots-container">
