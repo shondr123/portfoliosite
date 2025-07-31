@@ -9,7 +9,27 @@ body {
   padding: 0;
   direction: rtl;
   background-color: #f4f4f4;
-  color: #333;
+  color: #222;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+h1, h2, label {
+  color: var(--main-color);
+}
+
+p, li {
+  line-height: 1.7;
+  font-size: 1.05em;
+}
+
+main a {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+
+main a:hover {
+  color: #0097a7;
 }
 
 /* כותרת עליונה */
@@ -63,9 +83,6 @@ nav a.active {
   cursor: pointer;
   color: white;
 }
-
-
-
 
 /* כפתור מודרני */
 .btn {
@@ -170,74 +187,4 @@ form textarea {
   padding: 8px;
   margin-top: 5px;
   border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* עמוד סטטיסטיקות */
-.skills {
-  max-width: 600px;
-  margin: 30px auto;
-}
-
-.skill {
-  margin-bottom: 20px;
-}
-
-.skill label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.progress {
-  background-color: #ddd;
-  border-radius: 20px;
-  overflow: hidden;
-  height: 25px;
-}
-
-.bar {
-  height: 100%;
-  line-height: 25px;
-  color: white;
-  background-color: var(--main-color);
-  text-align: right;
-  padding-right: 10px;
-  border-radius: 20px 0 0 20px;
-  transition: width 1s ease;
-}
-
-/* מצב כהה */
-body.dark-mode {
-  background-color: #121212;
-  color: #eee;
-}
-
-body.dark-mode header {
-  background-color: #1e1e1e;
-}
-
-body.dark-mode nav {
-  background-color: #222;
-}
-
-body.dark-mode .project,
-body.dark-mode form {
-  background-color: #1f1f1f;
-  color: #fff;
-}
-
-body.dark-mode .btn {
-  background-color: #444;
-}
-
-body.dark-mode .btn:hover {
-  background-color: #666;
-}
-
-body.dark-mode input,
-body.dark-mode textarea {
-  background-color: #2a2a2a;
-  color: #eee;
-  border-color: #555;
-}
+  border-radius:
