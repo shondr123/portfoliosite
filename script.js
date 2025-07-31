@@ -30,9 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // טוען
-  window.addEventListener("load", () => {
-    document.getElementById("loader").style.display = "none";
-  });
+  
 
   AOS.init({ duration: 800, once: true });
 });
