@@ -1,3 +1,7 @@
+:root {
+  --main-color: #00bcd4;
+}
+
 /* כללי */
 body {
   font-family: Arial, sans-serif;
@@ -8,35 +12,56 @@ body {
   color: #333;
 }
 
-/* כותרת עליונה וניווט */
+/* כותרת עליונה */
 header {
   background-color: #222;
   color: white;
   padding: 20px;
   text-align: center;
+  position: relative;
 }
 
+/* ניווט */
 nav {
-  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #1e1e1e;
+  padding: 10px 0;
 }
 
 nav a {
+  padding: 10px 15px;
+  margin: 5px;
   color: white;
-  margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  display: inline-flex;
+  align-items: center;
 }
 
 nav a i {
-  margin-left: 5px;
+  margin-left: 6px;
 }
 
-nav a:hover {
-  text-decoration: underline;
+nav a:hover,
+nav a.active {
+  background-color: var(--main-color);
+  color: white;
 }
 
-main {
-  padding: 20px;
+/* כפתור מצב כהה/בהיר */
+#toggle-dark {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
 }
 
 /* Loader */
@@ -56,7 +81,7 @@ main {
 .loader-bar {
   width: 0;
   height: 5px;
-  background-color: #4caf50;
+  background-color: var(--main-color);
   animation: loadbar 2s ease-out forwards;
   border-radius: 5px;
 }
@@ -73,7 +98,7 @@ main {
   justify-content: center;
   gap: 6px;
   padding: 12px 24px;
-  background-color: #4caf50;
+  background-color: var(--main-color);
   color: white;
   border: none;
   border-radius: 25px;
@@ -89,7 +114,7 @@ main {
 }
 
 .btn:hover {
-  background-color: #45a049;
+  background-color: #0097a7;
   transform: scale(1.05);
 }
 
@@ -145,7 +170,7 @@ main {
 
 .contact-info i {
   margin-left: 6px;
-  color: #4caf50;
+  color: var(--main-color);
 }
 
 /* טופס */
@@ -199,7 +224,7 @@ form textarea {
   height: 100%;
   line-height: 25px;
   color: white;
-  background-color: #4caf50;
+  background-color: var(--main-color);
   text-align: right;
   padding-right: 10px;
   border-radius: 20px 0 0 20px;
@@ -216,6 +241,10 @@ body.dark-mode header {
   background-color: #1e1e1e;
 }
 
+body.dark-mode nav {
+  background-color: #222;
+}
+
 body.dark-mode .project,
 body.dark-mode form {
   background-color: #1f1f1f;
@@ -223,11 +252,11 @@ body.dark-mode form {
 }
 
 body.dark-mode .btn {
-  background-color: #555;
+  background-color: #444;
 }
 
 body.dark-mode .btn:hover {
-  background-color: #777;
+  background-color: #666;
 }
 
 body.dark-mode input,
@@ -235,35 +264,4 @@ body.dark-mode textarea {
   background-color: #2a2a2a;
   color: #eee;
   border-color: #555;
-}
-
-#toggle-dark {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  color: white;
-}
-
-/* תמונות מסך */
-.screenshots-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
-  justify-content: center;
-}
-
-.screenshots-container img {
-  width: 30%;
-  border-radius: 8px;
-  border: 2px solid #ccc;
-  transition: transform 0.3s;
-}
-
-.screenshots-container img:hover {
-  transform: scale(1.05);
 }
